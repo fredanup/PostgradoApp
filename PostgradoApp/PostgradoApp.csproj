@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C41A7321-6E5E-454A-9A0E-C15805CF9969}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PostgradoApp</RootNamespace>
+    <AssemblyName>PostgradoApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AppRestaurant\Packages\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="alumno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="alumno.Designer.cs">
+      <DependentUpon>alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="alumnoNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alumnoNuevo.Designer.cs">
+      <DependentUpon>alumnoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="asistencia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="asistencia.Designer.cs">
+      <DependentUpon>asistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dictamenDevuelto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dictamenDevuelto.Designer.cs">
+      <DependentUpon>dictamenDevuelto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dictamenEntregado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dictamenEntregado.Designer.cs">
+      <DependentUpon>dictamenEntregado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dictamenIngresado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dictamenIngresado.Designer.cs">
+      <DependentUpon>dictamenIngresado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dictamenNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dictamenNuevo.Designer.cs">
+      <DependentUpon>dictamenNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dictamenTotal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dictamenTotal.Designer.cs">
+      <DependentUpon>dictamenTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="docente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="docente.Designer.cs">
+      <DependentUpon>docente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="docenteNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="docenteNuevo.Designer.cs">
+      <DependentUpon>docenteNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doctorado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doctorado.Designer.cs">
+      <DependentUpon>doctorado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maestria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestria.Designer.cs">
+      <DependentUpon>Maestria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POSTGRADOModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSTGRADOModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTGRADOModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTGRADOModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSTGRADOModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TALUMNO.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TALUMNOFULLNAMEVIEW.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TALUMNOVIEW.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TALUMNO_TELEFONO.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TALUMNO_TELEFONOVIEW.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDICTAMEN_DEVUELTO.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDICTAMEN_DEVUELTOVIEW.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDICTAMEN_INGRESADO.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDICTAMEN_INGRESADOVIEW.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDOCENTE.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDOCENTEFULLNAMEVIEW.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDOCENTEVIEW.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDOCENTE_DOCTORADO.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDOCENTE_DOCTORADOVIEW.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDOCENTE_MAESTRIA.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDOCENTE_MAESTRIAVIEW.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDOCENTE_PROFESION.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDOCENTE_PROFESIONVIEW.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDOCENTE_TELEFONO.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDOCENTE_TELEFONOVIEW.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TDOCTORADO.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TMAESTRIA.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TPROFESION.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TUSUARIO.cs">
+      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="alumno.resx">
+      <DependentUpon>alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alumnoNuevo.resx">
+      <DependentUpon>alumnoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="asistencia.resx">
+      <DependentUpon>asistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dictamenDevuelto.resx">
+      <DependentUpon>dictamenDevuelto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dictamenEntregado.resx">
+      <DependentUpon>dictamenEntregado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dictamenIngresado.resx">
+      <DependentUpon>dictamenIngresado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dictamenNuevo.resx">
+      <DependentUpon>dictamenNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dictamenTotal.resx">
+      <DependentUpon>dictamenTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="docente.resx">
+      <DependentUpon>docente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="docenteNuevo.resx">
+      <DependentUpon>docenteNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doctorado.resx">
+      <DependentUpon>doctorado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestria.resx">
+      <DependentUpon>Maestria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="POSTGRADOModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>POSTGRADOModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="POSTGRADOModel.edmx.diagram">
+      <DependentUpon>POSTGRADOModel.edmx</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\docente.datasource" />
+    <None Include="Properties\DataSources\TALUMNO.datasource" />
+    <None Include="Properties\DataSources\TALUMNOFULLNAMEVIEW.datasource" />
+    <None Include="Properties\DataSources\TALUMNOVIEW.datasource" />
+    <None Include="Properties\DataSources\TDICTAMEN_DEVUELTO.datasource" />
+    <None Include="Properties\DataSources\TDICTAMEN_INGRESADO.datasource" />
+    <None Include="Properties\DataSources\TDICTAMEN_INGRESADOVIEW.datasource" />
+    <None Include="Properties\DataSources\TDOCENTE.datasource" />
+    <None Include="Properties\DataSources\TDOCENTEFULLNAMEVIEW.datasource" />
+    <None Include="Properties\DataSources\TDOCENTEVIEW.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="POSTGRADOModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>POSTGRADOModel.edmx</DependentUpon>
+      <LastGenOutput>POSTGRADOModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="POSTGRADOModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>POSTGRADOModel.edmx</DependentUpon>
+      <LastGenOutput>POSTGRADOModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
