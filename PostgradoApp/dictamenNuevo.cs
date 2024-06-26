@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data.Entity.Infrastructure;
+using System.Data.Entity;
+using System.Data.Entity.Validation;
 namespace PostgradoApp
 {
     public partial class dictamenNuevo : Form
@@ -71,6 +74,7 @@ namespace PostgradoApp
                 dictamenIngresadoInfo.fecha_emision = fechaEmisionDatePicker.Value;
                 dictamenIngresadoInfo.fecha_ingreso = fechaIngresoDatePicker.Value;
                 dictamenIngresadoInfo.apto = aptoSwitch.Value;
+                dictamenIngresadoInfo.foto_dictamen = null;
                 tDICTAMENINGRESADOBindingSource.EndEdit();
                 DialogResult = DialogResult.OK;
             }
@@ -80,6 +84,9 @@ namespace PostgradoApp
             }
 
         }
+
+
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {

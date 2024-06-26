@@ -23,6 +23,5 @@ namespace PostgradoApp
         public byte[] Foto_de_dictamen { get; set; }
         public System.DateTime Fecha_de_ingreso { get; set; }
         public bool Apto { get; set; }
-        public string Detalle { get; set; }
     }
 }

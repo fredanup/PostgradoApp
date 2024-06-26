@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,10 +41,10 @@
       <HintPath>..\..\AppRestaurant\Packages\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -145,103 +148,100 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="POSTGRADOModel.Context.cs">
+    <Compile Include="POSTGRADODBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>POSTGRADOModel.Context.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="POSTGRADOModel.cs">
+    <Compile Include="POSTGRADODBModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="POSTGRADOModel.Designer.cs">
+    <Compile Include="POSTGRADODBModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>POSTGRADOModel.edmx</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="TALUMNO.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TALUMNOFULLNAMEVIEW.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TALUMNOVIEW.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TALUMNO_TELEFONO.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TALUMNO_TELEFONOVIEW.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDICTAMEN_DEVUELTO.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDICTAMEN_DEVUELTOVIEW.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDICTAMEN_INGRESADO.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDICTAMEN_INGRESADOVIEW.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDOCENTE.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDOCENTEFULLNAMEVIEW.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDOCENTEVIEW.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDOCENTE_DOCTORADO.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDOCENTE_DOCTORADOVIEW.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDOCENTE_MAESTRIA.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDOCENTE_MAESTRIAVIEW.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDOCENTE_PROFESION.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDOCENTE_PROFESIONVIEW.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDOCENTE_TELEFONO.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDOCENTE_TELEFONOVIEW.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TDOCTORADO.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TMAESTRIA.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TPROFESION.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TUSUARIO.cs">
-      <DependentUpon>POSTGRADOModel.tt</DependentUpon>
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TUSUARIOFULLNAMEVIEW.cs">
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TUSUARIOVIEW.cs">
+      <DependentUpon>POSTGRADODBModel.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="alumno.resx">
       <DependentUpon>alumno.cs</DependentUpon>
@@ -295,25 +295,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="App.config" />
+    <None Include="App.Config" />
     <None Include="packages.config" />
-    <EntityDeploy Include="POSTGRADOModel.edmx">
+    <EntityDeploy Include="POSTGRADODBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>POSTGRADOModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>POSTGRADODBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="POSTGRADOModel.edmx.diagram">
-      <DependentUpon>POSTGRADOModel.edmx</DependentUpon>
+    <None Include="POSTGRADODBModel.edmx.diagram">
+      <DependentUpon>POSTGRADODBModel.edmx</DependentUpon>
     </None>
-    <None Include="Properties\DataSources\docente.datasource" />
-    <None Include="Properties\DataSources\TALUMNO.datasource" />
-    <None Include="Properties\DataSources\TALUMNOFULLNAMEVIEW.datasource" />
-    <None Include="Properties\DataSources\TALUMNOVIEW.datasource" />
-    <None Include="Properties\DataSources\TDICTAMEN_DEVUELTO.datasource" />
-    <None Include="Properties\DataSources\TDICTAMEN_INGRESADO.datasource" />
-    <None Include="Properties\DataSources\TDICTAMEN_INGRESADOVIEW.datasource" />
-    <None Include="Properties\DataSources\TDOCENTE.datasource" />
-    <None Include="Properties\DataSources\TDOCENTEFULLNAMEVIEW.datasource" />
-    <None Include="Properties\DataSources\TDOCENTEVIEW.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -328,16 +318,27 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="POSTGRADOModel.Context.tt">
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="POSTGRADODBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>POSTGRADOModel.edmx</DependentUpon>
-      <LastGenOutput>POSTGRADOModel.Context.cs</LastGenOutput>
+      <DependentUpon>POSTGRADODBModel.edmx</DependentUpon>
+      <LastGenOutput>POSTGRADODBModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="POSTGRADOModel.tt">
+    <Content Include="POSTGRADODBModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>POSTGRADOModel.edmx</DependentUpon>
-      <LastGenOutput>POSTGRADOModel.cs</LastGenOutput>
+      <DependentUpon>POSTGRADODBModel.edmx</DependentUpon>
+      <LastGenOutput>POSTGRADODBModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
 </Project>

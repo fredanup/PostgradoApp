@@ -56,11 +56,11 @@ namespace PostgradoApp
         }
         private void cargarGrilla()
         {
-            //db = new POSTGRADODBEntities();
-            //tDICTAMENINGRESADOVIEWBindingSource.DataSource = db.TDICTAMEN_INGRESADOVIEW.ToList();
-            //tDICTAMENINGRESADOBindingSource.DataSource = db.TDICTAMEN_INGRESADO.ToList();
-            //dataGridDictamen.ClearSelection();
-            //diseñarGrilla();
+            db = new POSTGRADODBEntities();
+            tDICTAMENINGRESADOVIEWBindingSource.DataSource = db.TDICTAMEN_INGRESADOVIEW.ToList();
+            tDICTAMENINGRESADOBindingSource.DataSource = db.TDICTAMEN_INGRESADO.ToList();
+            dataGridDictamen.ClearSelection();
+            diseñarGrilla();
 
         }
         private void diseñarGrilla()

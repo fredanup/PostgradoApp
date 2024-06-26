@@ -16,6 +16,6 @@ namespace PostgradoApp
     {
         public int id { get; set; }
         public string Docente { get; set; }
-        public string Celular { get; set; }
+        public string Número_telefónico { get; set; }
     }
 }

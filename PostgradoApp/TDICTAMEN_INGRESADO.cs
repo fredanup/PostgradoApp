@@ -29,7 +29,6 @@ namespace PostgradoApp
         public byte[] foto_dictamen { get; set; }
         public System.DateTime fecha_ingreso { get; set; }
         public bool apto { get; set; }
-        public string detalle { get; set; }
     
         public virtual TALUMNO TALUMNO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

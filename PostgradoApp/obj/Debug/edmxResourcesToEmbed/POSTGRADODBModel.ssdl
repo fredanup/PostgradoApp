@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="POSTGRADODBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="TALUMNO">
     <Key>
       <PropertyRef Name="id" />
@@ -35,10 +25,10 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_dictamen" Type="int" />
-    <Property Name="nombre_destinatario" Type="varchar" MaxLength="255" />
-    <Property Name="apPaterno_destinatario" Type="varchar" MaxLength="255" />
-    <Property Name="apMaterno_destinatario" Type="varchar" MaxLength="255" />
-    <Property Name="fecha_entrega" Type="date" />
+    <Property Name="nombre_destinatario" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apPaterno_destinatario" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apMaterno_destinatario" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="fecha_entrega" Type="date" Nullable="false" />
     <Property Name="foto_dictamen" Type="image" />
   </EntityType>
   <EntityType Name="TDICTAMEN_INGRESADO">
@@ -54,7 +44,6 @@
     <Property Name="foto_dictamen" Type="image" />
     <Property Name="fecha_ingreso" Type="date" Nullable="false" />
     <Property Name="apto" Type="bit" Nullable="false" />
-    <Property Name="detalle" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="TDOCENTE">
     <Key>
@@ -177,6 +166,8 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDICTAMEN_DEVUELTOVIEW' no t
       <PropertyRef Name="Docente" />
       <PropertyRef Name="Destinatario" />
       <PropertyRef Name="Apto" />
+      <PropertyRef Name="Estudio" />
+      <PropertyRef Name="Fecha de entrega" />
     </Key>
     <Property Name="id" Type="int" Nullable="false" />
     <Property Name="Id de dictamen" Type="int" Nullable="false" />
@@ -184,7 +175,8 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDICTAMEN_DEVUELTOVIEW' no t
     <Property Name="Docente" Type="varchar" MaxLength="768" Nullable="false" />
     <Property Name="Destinatario" Type="varchar" MaxLength="768" Nullable="false" />
     <Property Name="Apto" Type="bit" Nullable="false" />
-    <Property Name="Fecha de entrega" Type="date" />
+    <Property Name="Estudio" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Fecha de entrega" Type="date" Nullable="false" />
     <Property Name="Foto de dictamen" Type="image" />
   </EntityType>
   <!--Errores durante la generación:
@@ -209,7 +201,6 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDICTAMEN_INGRESADOVIEW' no 
     <Property Name="Foto de dictamen" Type="image" />
     <Property Name="Fecha de ingreso" Type="date" Nullable="false" />
     <Property Name="Apto" Type="bit" Nullable="false" />
-    <Property Name="Detalle" Type="varchar(max)" />
   </EntityType>
   <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTE_DOCTORADOVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
@@ -256,7 +247,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTE_TELEFONOVIEW' no ti
     </Key>
     <Property Name="id" Type="int" Nullable="false" />
     <Property Name="Docente" Type="varchar" MaxLength="768" Nullable="false" />
-    <Property Name="Celular" Type="varchar" MaxLength="100" />
+    <Property Name="Número telefónico" Type="varchar" MaxLength="100" />
   </EntityType>
   <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEFULLNAMEVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
@@ -278,7 +269,31 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
     <Property Name="Teléfono fijo" Type="varchar" MaxLength="100" />
     <Property Name="E-mail" Type="varchar" MaxLength="100" />
   </EntityType>
-  <Association Name="FK__TALUMNO_T__id_al__5165187F">
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TUSUARIOFULLNAMEVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TUSUARIOFULLNAMEVIEW">
+    <Key>
+      <PropertyRef Name="Nombre del usuario" />
+    </Key>
+    <Property Name="Nombre del usuario" Type="varchar" MaxLength="768" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TUSUARIOVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TUSUARIOVIEW">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Nombre del usuario" />
+      <PropertyRef Name="Nombre de cuenta" />
+      <PropertyRef Name="Contraseña" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre del usuario" Type="varchar" MaxLength="768" Nullable="false" />
+    <Property Name="Nombre de cuenta" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Contraseña" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Cargo" Type="varchar" MaxLength="100" />
+    <Property Name="Foto" Type="image" />
+  </EntityType>
+  <Association Name="FK__TALUMNO_T__id_al__3E52440B">
     <End Role="TALUMNO" Type="Self.TALUMNO" Multiplicity="0..1" />
     <End Role="TALUMNO_TELEFONO" Type="Self.TALUMNO_TELEFONO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -290,7 +305,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TDICTAMEN__id_al__5441852A">
+  <Association Name="FK__TDICTAMEN__id_al__412EB0B6">
     <End Role="TALUMNO" Type="Self.TALUMNO" Multiplicity="0..1" />
     <End Role="TDICTAMEN_INGRESADO" Type="Self.TDICTAMEN_INGRESADO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -302,7 +317,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TDICTAMEN__id_di__5535A963">
+  <Association Name="FK__TDICTAMEN__id_di__4222D4EF">
     <End Role="TDOCENTE" Type="Self.TDOCENTE" Multiplicity="0..1" />
     <End Role="TDICTAMEN_INGRESADO" Type="Self.TDICTAMEN_INGRESADO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -314,7 +329,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TDICTAMEN__id_di__5812160E">
+  <Association Name="FK__TDICTAMEN__id_di__44FF419A">
     <End Role="TDICTAMEN_INGRESADO" Type="Self.TDICTAMEN_INGRESADO" Multiplicity="0..1" />
     <End Role="TDICTAMEN_DEVUELTO" Type="Self.TDICTAMEN_DEVUELTO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -326,7 +341,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TDOCENTE___id_do__3D5E1FD2">
+  <Association Name="FK__TDOCENTE___id_do__2A4B4B5E">
     <End Role="TDOCENTE" Type="Self.TDOCENTE" Multiplicity="0..1" />
     <End Role="TDOCENTE_PROFESION" Type="Self.TDOCENTE_PROFESION" Multiplicity="*" />
     <ReferentialConstraint>
@@ -338,7 +353,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TDOCENTE___id_do__44FF419A">
+  <Association Name="FK__TDOCENTE___id_do__31EC6D26">
     <End Role="TDOCENTE" Type="Self.TDOCENTE" Multiplicity="0..1" />
     <End Role="TDOCENTE_MAESTRIA" Type="Self.TDOCENTE_MAESTRIA" Multiplicity="*" />
     <ReferentialConstraint>
@@ -350,7 +365,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TDOCENTE___id_do__48CFD27E">
+  <Association Name="FK__TDOCENTE___id_do__35BCFE0A">
     <End Role="TDOCENTE" Type="Self.TDOCENTE" Multiplicity="0..1" />
     <End Role="TDOCENTE_DOCTORADO" Type="Self.TDOCENTE_DOCTORADO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -362,7 +377,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TDOCENTE___id_do__49C3F6B7">
+  <Association Name="FK__TDOCENTE___id_do__36B12243">
     <End Role="TDOCTORADO" Type="Self.TDOCTORADO" Multiplicity="0..1" />
     <End Role="TDOCENTE_DOCTORADO" Type="Self.TDOCENTE_DOCTORADO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -374,7 +389,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TDOCENTE___id_do__4CA06362">
+  <Association Name="FK__TDOCENTE___id_do__398D8EEE">
     <End Role="TDOCENTE" Type="Self.TDOCENTE" Multiplicity="0..1" />
     <End Role="TDOCENTE_TELEFONO" Type="Self.TDOCENTE_TELEFONO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -386,7 +401,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TDOCENTE___id_ma__45F365D3">
+  <Association Name="FK__TDOCENTE___id_ma__32E0915F">
     <End Role="TMAESTRIA" Type="Self.TMAESTRIA" Multiplicity="0..1" />
     <End Role="TDOCENTE_MAESTRIA" Type="Self.TDOCENTE_MAESTRIA" Multiplicity="*" />
     <ReferentialConstraint>
@@ -398,7 +413,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TDOCENTE___id_pr__3E52440B">
+  <Association Name="FK__TDOCENTE___id_pr__2B3F6F97">
     <End Role="TPROFESION" Type="Self.TPROFESION" Multiplicity="0..1" />
     <End Role="TDOCENTE_PROFESION" Type="Self.TDOCENTE_PROFESION" Multiplicity="*" />
     <ReferentialConstraint>
@@ -411,7 +426,6 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="POSTGRADODBModelStoreContainer">
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TALUMNO" EntityType="Self.TALUMNO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TALUMNO_TELEFONO" EntityType="Self.TALUMNO_TELEFONO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TDICTAMEN_DEVUELTO" EntityType="Self.TDICTAMEN_DEVUELTO" Schema="dbo" store:Type="Tables" />
@@ -453,6 +467,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
     [TDICTAMEN_DEVUELTOVIEW].[Docente] AS [Docente], 
     [TDICTAMEN_DEVUELTOVIEW].[Destinatario] AS [Destinatario], 
     [TDICTAMEN_DEVUELTOVIEW].[Apto] AS [Apto], 
+    [TDICTAMEN_DEVUELTOVIEW].[Estudio] AS [Estudio], 
     [TDICTAMEN_DEVUELTOVIEW].[Fecha de entrega] AS [Fecha de entrega], 
     [TDICTAMEN_DEVUELTOVIEW].[Foto de dictamen] AS [Foto de dictamen]
     FROM [dbo].[TDICTAMEN_DEVUELTOVIEW] AS [TDICTAMEN_DEVUELTOVIEW]</DefiningQuery>
@@ -467,8 +482,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
     [TDICTAMEN_INGRESADOVIEW].[Fecha de emisión] AS [Fecha de emisión], 
     [TDICTAMEN_INGRESADOVIEW].[Foto de dictamen] AS [Foto de dictamen], 
     [TDICTAMEN_INGRESADOVIEW].[Fecha de ingreso] AS [Fecha de ingreso], 
-    [TDICTAMEN_INGRESADOVIEW].[Apto] AS [Apto], 
-    [TDICTAMEN_INGRESADOVIEW].[Detalle] AS [Detalle]
+    [TDICTAMEN_INGRESADOVIEW].[Apto] AS [Apto]
     FROM [dbo].[TDICTAMEN_INGRESADOVIEW] AS [TDICTAMEN_INGRESADOVIEW]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="TDOCENTE_DOCTORADOVIEW" EntityType="Self.TDOCENTE_DOCTORADOVIEW" store:Type="Views" store:Schema="dbo">
@@ -499,7 +513,7 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
       <DefiningQuery>SELECT 
     [TDOCENTE_TELEFONOVIEW].[id] AS [id], 
     [TDOCENTE_TELEFONOVIEW].[Docente] AS [Docente], 
-    [TDOCENTE_TELEFONOVIEW].[Celular] AS [Celular]
+    [TDOCENTE_TELEFONOVIEW].[Número telefónico] AS [Número telefónico]
     FROM [dbo].[TDOCENTE_TELEFONOVIEW] AS [TDOCENTE_TELEFONOVIEW]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="TDOCENTEFULLNAMEVIEW" EntityType="Self.TDOCENTEFULLNAMEVIEW" store:Type="Views" store:Schema="dbo">
@@ -515,47 +529,62 @@ advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene defin
     [TDOCENTEVIEW].[E-mail] AS [E-mail]
     FROM [dbo].[TDOCENTEVIEW] AS [TDOCENTEVIEW]</DefiningQuery>
     </EntitySet>
-    <AssociationSet Name="FK__TALUMNO_T__id_al__5165187F" Association="Self.FK__TALUMNO_T__id_al__5165187F">
+    <EntitySet Name="TUSUARIOFULLNAMEVIEW" EntityType="Self.TUSUARIOFULLNAMEVIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TUSUARIOFULLNAMEVIEW].[Nombre del usuario] AS [Nombre del usuario]
+    FROM [dbo].[TUSUARIOFULLNAMEVIEW] AS [TUSUARIOFULLNAMEVIEW]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TUSUARIOVIEW" EntityType="Self.TUSUARIOVIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TUSUARIOVIEW].[id] AS [id], 
+    [TUSUARIOVIEW].[Nombre del usuario] AS [Nombre del usuario], 
+    [TUSUARIOVIEW].[Nombre de cuenta] AS [Nombre de cuenta], 
+    [TUSUARIOVIEW].[Contraseña] AS [Contraseña], 
+    [TUSUARIOVIEW].[Cargo] AS [Cargo], 
+    [TUSUARIOVIEW].[Foto] AS [Foto]
+    FROM [dbo].[TUSUARIOVIEW] AS [TUSUARIOVIEW]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__TALUMNO_T__id_al__3E52440B" Association="Self.FK__TALUMNO_T__id_al__3E52440B">
       <End Role="TALUMNO" EntitySet="TALUMNO" />
       <End Role="TALUMNO_TELEFONO" EntitySet="TALUMNO_TELEFONO" />
     </AssociationSet>
-    <AssociationSet Name="FK__TDICTAMEN__id_al__5441852A" Association="Self.FK__TDICTAMEN__id_al__5441852A">
+    <AssociationSet Name="FK__TDICTAMEN__id_al__412EB0B6" Association="Self.FK__TDICTAMEN__id_al__412EB0B6">
       <End Role="TALUMNO" EntitySet="TALUMNO" />
       <End Role="TDICTAMEN_INGRESADO" EntitySet="TDICTAMEN_INGRESADO" />
     </AssociationSet>
-    <AssociationSet Name="FK__TDICTAMEN__id_di__5535A963" Association="Self.FK__TDICTAMEN__id_di__5535A963">
+    <AssociationSet Name="FK__TDICTAMEN__id_di__4222D4EF" Association="Self.FK__TDICTAMEN__id_di__4222D4EF">
       <End Role="TDOCENTE" EntitySet="TDOCENTE" />
       <End Role="TDICTAMEN_INGRESADO" EntitySet="TDICTAMEN_INGRESADO" />
     </AssociationSet>
-    <AssociationSet Name="FK__TDICTAMEN__id_di__5812160E" Association="Self.FK__TDICTAMEN__id_di__5812160E">
+    <AssociationSet Name="FK__TDICTAMEN__id_di__44FF419A" Association="Self.FK__TDICTAMEN__id_di__44FF419A">
       <End Role="TDICTAMEN_INGRESADO" EntitySet="TDICTAMEN_INGRESADO" />
       <End Role="TDICTAMEN_DEVUELTO" EntitySet="TDICTAMEN_DEVUELTO" />
     </AssociationSet>
-    <AssociationSet Name="FK__TDOCENTE___id_do__3D5E1FD2" Association="Self.FK__TDOCENTE___id_do__3D5E1FD2">
+    <AssociationSet Name="FK__TDOCENTE___id_do__2A4B4B5E" Association="Self.FK__TDOCENTE___id_do__2A4B4B5E">
       <End Role="TDOCENTE" EntitySet="TDOCENTE" />
       <End Role="TDOCENTE_PROFESION" EntitySet="TDOCENTE_PROFESION" />
     </AssociationSet>
-    <AssociationSet Name="FK__TDOCENTE___id_do__44FF419A" Association="Self.FK__TDOCENTE___id_do__44FF419A">
+    <AssociationSet Name="FK__TDOCENTE___id_do__31EC6D26" Association="Self.FK__TDOCENTE___id_do__31EC6D26">
       <End Role="TDOCENTE" EntitySet="TDOCENTE" />
       <End Role="TDOCENTE_MAESTRIA" EntitySet="TDOCENTE_MAESTRIA" />
     </AssociationSet>
-    <AssociationSet Name="FK__TDOCENTE___id_do__48CFD27E" Association="Self.FK__TDOCENTE___id_do__48CFD27E">
+    <AssociationSet Name="FK__TDOCENTE___id_do__35BCFE0A" Association="Self.FK__TDOCENTE___id_do__35BCFE0A">
       <End Role="TDOCENTE" EntitySet="TDOCENTE" />
       <End Role="TDOCENTE_DOCTORADO" EntitySet="TDOCENTE_DOCTORADO" />
     </AssociationSet>
-    <AssociationSet Name="FK__TDOCENTE___id_do__49C3F6B7" Association="Self.FK__TDOCENTE___id_do__49C3F6B7">
+    <AssociationSet Name="FK__TDOCENTE___id_do__36B12243" Association="Self.FK__TDOCENTE___id_do__36B12243">
       <End Role="TDOCTORADO" EntitySet="TDOCTORADO" />
       <End Role="TDOCENTE_DOCTORADO" EntitySet="TDOCENTE_DOCTORADO" />
     </AssociationSet>
-    <AssociationSet Name="FK__TDOCENTE___id_do__4CA06362" Association="Self.FK__TDOCENTE___id_do__4CA06362">
+    <AssociationSet Name="FK__TDOCENTE___id_do__398D8EEE" Association="Self.FK__TDOCENTE___id_do__398D8EEE">
       <End Role="TDOCENTE" EntitySet="TDOCENTE" />
       <End Role="TDOCENTE_TELEFONO" EntitySet="TDOCENTE_TELEFONO" />
     </AssociationSet>
-    <AssociationSet Name="FK__TDOCENTE___id_ma__45F365D3" Association="Self.FK__TDOCENTE___id_ma__45F365D3">
+    <AssociationSet Name="FK__TDOCENTE___id_ma__32E0915F" Association="Self.FK__TDOCENTE___id_ma__32E0915F">
       <End Role="TMAESTRIA" EntitySet="TMAESTRIA" />
       <End Role="TDOCENTE_MAESTRIA" EntitySet="TDOCENTE_MAESTRIA" />
     </AssociationSet>
-    <AssociationSet Name="FK__TDOCENTE___id_pr__3E52440B" Association="Self.FK__TDOCENTE___id_pr__3E52440B">
+    <AssociationSet Name="FK__TDOCENTE___id_pr__2B3F6F97" Association="Self.FK__TDOCENTE___id_pr__2B3F6F97">
       <End Role="TPROFESION" EntitySet="TPROFESION" />
       <End Role="TDOCENTE_PROFESION" EntitySet="TDOCENTE_PROFESION" />
     </AssociationSet>

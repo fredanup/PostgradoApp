@@ -20,7 +20,8 @@ namespace PostgradoApp
         public string Docente { get; set; }
         public string Destinatario { get; set; }
         public bool Apto { get; set; }
-        public Nullable<System.DateTime> Fecha_de_entrega { get; set; }
+        public string Estudio { get; set; }
+        public System.DateTime Fecha_de_entrega { get; set; }
         public byte[] Foto_de_dictamen { get; set; }
     }
 }

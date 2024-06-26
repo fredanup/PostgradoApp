@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ed85d9242ac7448cb0919ac85efaad54" Name="Diagram1">
+        <EntityTypeShape EntityType="POSTGRADODBModel.TALUMNO" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TALUMNO_TELEFONO" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDICTAMEN_DEVUELTO" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDICTAMEN_INGRESADO" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDOCENTE" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDOCENTE_DOCTORADO" Width="1.5" PointX="6" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDOCENTE_MAESTRIA" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDOCENTE_PROFESION" Width="1.5" PointX="6" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDOCENTE_TELEFONO" Width="1.5" PointX="3" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDOCTORADO" Width="1.5" PointX="3.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TMAESTRIA" Width="1.5" PointX="3.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TPROFESION" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TUSUARIO" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TALUMNO_TELEFONOVIEW" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TALUMNOFULLNAMEVIEW" Width="1.5" PointX="7.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TALUMNOVIEW" Width="1.5" PointX="8.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDICTAMEN_DEVUELTOVIEW" Width="1.5" PointX="8.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDICTAMEN_INGRESADOVIEW" Width="1.5" PointX="8.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDOCENTE_DOCTORADOVIEW" Width="1.5" PointX="10.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDOCENTE_MAESTRIAVIEW" Width="1.5" PointX="10.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDOCENTE_PROFESIONVIEW" Width="1.5" PointX="10.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDOCENTE_TELEFONOVIEW" Width="1.5" PointX="10.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDOCENTEFULLNAMEVIEW" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TDOCENTEVIEW" Width="1.5" PointX="12.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TUSUARIOFULLNAMEVIEW" Width="1.5" PointX="12.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="POSTGRADODBModel.TUSUARIOVIEW" Width="1.5" PointX="12.75" PointY="5.875" IsExpanded="true" />
+        <AssociationConnector Association="POSTGRADODBModel.FK__TALUMNO_T__id_al__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="POSTGRADODBModel.FK__TDICTAMEN__id_al__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="POSTGRADODBModel.FK__TDICTAMEN__id_di__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="POSTGRADODBModel.FK__TDICTAMEN__id_di__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="POSTGRADODBModel.FK__TDOCENTE___id_do__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="POSTGRADODBModel.FK__TDOCENTE___id_do__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="POSTGRADODBModel.FK__TDOCENTE___id_do__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="POSTGRADODBModel.FK__TDOCENTE___id_do__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="POSTGRADODBModel.FK__TDOCENTE___id_do__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="POSTGRADODBModel.FK__TDOCENTE___id_ma__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="POSTGRADODBModel.FK__TDOCENTE___id_pr__2B3F6F97" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -176,10 +176,7 @@
             this.dictaminanteComboBox.TabIndex = 2;
             this.dictaminanteComboBox.ValueMember = "id";
             this.dictaminanteComboBox.SelectedIndexChanged += new System.EventHandler(this.dictaminanteComboBox_SelectedIndexChanged);
-            // 
-            // tDOCENTEVIEWBindingSource
-            // 
-            this.tDOCENTEVIEWBindingSource.DataSource = typeof(PostgradoApp.TDOCENTEVIEW);
+         
             // 
             // pictureBox1
             // 
@@ -316,10 +313,7 @@
             this.alumnoComboBox.Size = new System.Drawing.Size(224, 21);
             this.alumnoComboBox.TabIndex = 1;
             this.alumnoComboBox.ValueMember = "id";
-            // 
-            // tALUMNOVIEWBindingSource
-            // 
-            this.tALUMNOVIEWBindingSource.DataSource = typeof(PostgradoApp.TALUMNOVIEW);
+
             // 
             // btnCancel
             // 
@@ -426,10 +420,7 @@
             this.asuntoTxtBox.Text = "Asunto";
             this.asuntoTxtBox.Enter += new System.EventHandler(this.Enter1);
             this.asuntoTxtBox.Leave += new System.EventHandler(this.Leave1);
-            // 
-            // tDICTAMENINGRESADOVIEWBindingSource
-            // 
-            this.tDICTAMENINGRESADOVIEWBindingSource.DataSource = typeof(PostgradoApp.TDICTAMEN_INGRESADOVIEW);
+
             // 
             // bunifuDragControl1
             // 
@@ -437,10 +428,7 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.topbar;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // tDICTAMENINGRESADOBindingSource
-            // 
-            this.tDICTAMENINGRESADOBindingSource.DataSource = typeof(PostgradoApp.TDICTAMEN_INGRESADO);
+
             // 
             // dictamenNuevo
             // 

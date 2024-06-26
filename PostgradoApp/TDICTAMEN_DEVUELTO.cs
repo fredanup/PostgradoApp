@@ -19,7 +19,7 @@ namespace PostgradoApp
         public string nombre_destinatario { get; set; }
         public string apPaterno_destinatario { get; set; }
         public string apMaterno_destinatario { get; set; }
-        public Nullable<System.DateTime> fecha_entrega { get; set; }
+        public System.DateTime fecha_entrega { get; set; }
         public byte[] foto_dictamen { get; set; }
     
         public virtual TDICTAMEN_INGRESADO TDICTAMEN_INGRESADO { get; set; }
