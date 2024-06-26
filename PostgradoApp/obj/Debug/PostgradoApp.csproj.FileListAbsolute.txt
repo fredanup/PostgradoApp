@@ -1,0 +1,101 @@
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Login.resources
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Properties.Resources.resources
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\bin\Debug\PostgradoApp.exe.config
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\bin\Debug\PostgradoApp.exe
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\bin\Debug\PostgradoApp.pdb
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.CopyComplete
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.exe
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.pdb
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Menu.resources
+C:\Users\Usuario\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.UserControlDictamen.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\bin\Debug\PostgradoApp.exe.config
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\bin\Debug\PostgradoApp.exe
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\bin\Debug\PostgradoApp.pdb
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\bin\Debug\EntityFramework.dll
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\bin\Debug\EntityFramework.xml
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.alumno.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.alumnoNuevo.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenDevuelto.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenEntregado.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenIngresado.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenNuevo.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenTotal.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.docente.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.docenteNuevo.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.doctorado.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Login.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Maestria.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Menu.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Properties.Resources.resources
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.GenerateResource.cache
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.CoreCompileInputs.cache
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.CopyComplete
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.exe
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.pdb
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csprojAssemblyReference.cache
+C:\Users\Fredy Angel\source\repos\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.asistencia.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\bin\Debug\PostgradoApp.exe.config
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\bin\Debug\PostgradoApp.exe
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\bin\Debug\PostgradoApp.pdb
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\bin\Debug\EntityFramework.dll
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\bin\Debug\EntityFramework.SqlServer.dll
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\bin\Debug\EntityFramework.xml
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\bin\Debug\EntityFramework.SqlServer.xml
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.AssemblyReference.cache
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.SuggestedBindingRedirects.cache
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.alumno.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.alumnoNuevo.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.asistencia.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenDevuelto.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenEntregado.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenIngresado.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenNuevo.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenTotal.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.docente.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.docenteNuevo.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.doctorado.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Login.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Maestria.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Menu.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Properties.Resources.resources
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.GenerateResource.cache
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.CoreCompileInputs.cache
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.CopyComplete
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.exe
+D:\ANGEL\Angel\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.pdb
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\bin\Debug\PostgradoApp.exe.config
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\bin\Debug\PostgradoApp.exe
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\bin\Debug\PostgradoApp.pdb
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\bin\Debug\EntityFramework.dll
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\bin\Debug\EntityFramework.xml
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.AssemblyReference.cache
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.alumno.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.alumnoNuevo.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.asistencia.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenDevuelto.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenEntregado.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenIngresado.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenNuevo.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.dictamenTotal.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.docente.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.docenteNuevo.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.doctorado.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Login.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Maestria.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Menu.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.Properties.Resources.resources
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.GenerateResource.cache
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.csproj.CoreCompileInputs.cache
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.exe
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\PostgradoApp.pdb
+C:\Users\freda\OneDrive\Documentos\Trabajo\Desarrollo\PostgradoApp\PostgradoApp\obj\Debug\Postgrad.DAEB527E.Up2Date

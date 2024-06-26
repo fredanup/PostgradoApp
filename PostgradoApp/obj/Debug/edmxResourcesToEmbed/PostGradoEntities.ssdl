@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="POSTGRADODBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TALUMNO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apPaterno" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apMaterno" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="telefono_fijo" Type="varchar" MaxLength="100" />
+    <Property Name="correo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TALUMNO_TELEFONO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_alumno" Type="int" />
+    <Property Name="numero_movil" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TDICTAMEN_DEVUELTO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_dictamen" Type="int" />
+    <Property Name="nombre_destinatario" Type="varchar" MaxLength="255" />
+    <Property Name="apPaterno_destinatario" Type="varchar" MaxLength="255" />
+    <Property Name="apMaterno_destinatario" Type="varchar" MaxLength="255" />
+    <Property Name="fecha_entrega" Type="date" />
+    <Property Name="foto_dictamen" Type="image" />
+  </EntityType>
+  <EntityType Name="TDICTAMEN_INGRESADO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_alumno" Type="int" />
+    <Property Name="id_dictaminante" Type="int" />
+    <Property Name="asunto" Type="varchar(max)" Nullable="false" />
+    <Property Name="destinatario" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="fecha_emision" Type="date" Nullable="false" />
+    <Property Name="foto_dictamen" Type="image" />
+    <Property Name="fecha_ingreso" Type="date" Nullable="false" />
+    <Property Name="observado" Type="bit" Nullable="false" />
+    <Property Name="detalle" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="TDICTAMINANTE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apPaterno" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apMaterno" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="profesion" Type="varchar" MaxLength="100" />
+    <Property Name="telefono_fijo" Type="varchar" MaxLength="100" />
+    <Property Name="correo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TDICTAMINANTE_DOCTORADO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_dictaminante" Type="int" />
+    <Property Name="id_doctorado" Type="int" />
+  </EntityType>
+  <EntityType Name="TDICTAMINANTE_MAESTRIA">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_dictaminante" Type="int" />
+    <Property Name="id_maestria" Type="int" />
+  </EntityType>
+  <EntityType Name="TDICTAMINANTE_TELEFONO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_dictaminante" Type="int" />
+    <Property Name="numero_movil" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TDOCTORADO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="especialidad" Type="varchar" MaxLength="200" />
+    <Property Name="universidad" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="TMAESTRIA">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="especialidad" Type="varchar" MaxLength="200" />
+    <Property Name="universidad" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="TUSUARIO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apPaterno" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apMaterno" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="usuario" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="contraseña" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="cargo" Type="varchar" MaxLength="100" />
+    <Property Name="foto" Type="image" />
+  </EntityType>
+  <Association Name="FK__TALUMNO_T__id_al__4BAC3F29">
+    <End Role="TALUMNO" Type="Self.TALUMNO" Multiplicity="0..1" />
+    <End Role="TALUMNO_TELEFONO" Type="Self.TALUMNO_TELEFONO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TALUMNO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TALUMNO_TELEFONO">
+        <PropertyRef Name="id_alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDICTAMEN__id_al__4E88ABD4">
+    <End Role="TALUMNO" Type="Self.TALUMNO" Multiplicity="0..1" />
+    <End Role="TDICTAMEN_INGRESADO" Type="Self.TDICTAMEN_INGRESADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TALUMNO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDICTAMEN_INGRESADO">
+        <PropertyRef Name="id_alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDICTAMEN__id_di__4F7CD00D">
+    <End Role="TDICTAMINANTE" Type="Self.TDICTAMINANTE" Multiplicity="0..1" />
+    <End Role="TDICTAMEN_INGRESADO" Type="Self.TDICTAMEN_INGRESADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDICTAMINANTE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDICTAMEN_INGRESADO">
+        <PropertyRef Name="id_dictaminante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDICTAMEN__id_di__52593CB8">
+    <End Role="TDICTAMEN_INGRESADO" Type="Self.TDICTAMEN_INGRESADO" Multiplicity="0..1" />
+    <End Role="TDICTAMEN_DEVUELTO" Type="Self.TDICTAMEN_DEVUELTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDICTAMEN_INGRESADO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDICTAMEN_DEVUELTO">
+        <PropertyRef Name="id_dictamen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDICTAMIN__id_di__3F466844">
+    <End Role="TDICTAMINANTE" Type="Self.TDICTAMINANTE" Multiplicity="0..1" />
+    <End Role="TDICTAMINANTE_MAESTRIA" Type="Self.TDICTAMINANTE_MAESTRIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDICTAMINANTE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDICTAMINANTE_MAESTRIA">
+        <PropertyRef Name="id_dictaminante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDICTAMIN__id_di__4316F928">
+    <End Role="TDICTAMINANTE" Type="Self.TDICTAMINANTE" Multiplicity="0..1" />
+    <End Role="TDICTAMINANTE_DOCTORADO" Type="Self.TDICTAMINANTE_DOCTORADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDICTAMINANTE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDICTAMINANTE_DOCTORADO">
+        <PropertyRef Name="id_dictaminante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDICTAMIN__id_di__46E78A0C">
+    <End Role="TDICTAMINANTE" Type="Self.TDICTAMINANTE" Multiplicity="0..1" />
+    <End Role="TDICTAMINANTE_TELEFONO" Type="Self.TDICTAMINANTE_TELEFONO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDICTAMINANTE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDICTAMINANTE_TELEFONO">
+        <PropertyRef Name="id_dictaminante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDICTAMIN__id_do__440B1D61">
+    <End Role="TDOCTORADO" Type="Self.TDOCTORADO" Multiplicity="0..1" />
+    <End Role="TDICTAMINANTE_DOCTORADO" Type="Self.TDICTAMINANTE_DOCTORADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDOCTORADO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDICTAMINANTE_DOCTORADO">
+        <PropertyRef Name="id_doctorado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDICTAMIN__id_ma__403A8C7D">
+    <End Role="TMAESTRIA" Type="Self.TMAESTRIA" Multiplicity="0..1" />
+    <End Role="TDICTAMINANTE_MAESTRIA" Type="Self.TDICTAMINANTE_MAESTRIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TMAESTRIA">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDICTAMINANTE_MAESTRIA">
+        <PropertyRef Name="id_maestria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="POSTGRADODBModelStoreContainer">
+    <EntitySet Name="TALUMNO" EntityType="Self.TALUMNO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TALUMNO_TELEFONO" EntityType="Self.TALUMNO_TELEFONO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDICTAMEN_DEVUELTO" EntityType="Self.TDICTAMEN_DEVUELTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDICTAMEN_INGRESADO" EntityType="Self.TDICTAMEN_INGRESADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDICTAMINANTE" EntityType="Self.TDICTAMINANTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDICTAMINANTE_DOCTORADO" EntityType="Self.TDICTAMINANTE_DOCTORADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDICTAMINANTE_MAESTRIA" EntityType="Self.TDICTAMINANTE_MAESTRIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDICTAMINANTE_TELEFONO" EntityType="Self.TDICTAMINANTE_TELEFONO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDOCTORADO" EntityType="Self.TDOCTORADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TMAESTRIA" EntityType="Self.TMAESTRIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TUSUARIO" EntityType="Self.TUSUARIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__TALUMNO_T__id_al__4BAC3F29" Association="Self.FK__TALUMNO_T__id_al__4BAC3F29">
+      <End Role="TALUMNO" EntitySet="TALUMNO" />
+      <End Role="TALUMNO_TELEFONO" EntitySet="TALUMNO_TELEFONO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDICTAMEN__id_al__4E88ABD4" Association="Self.FK__TDICTAMEN__id_al__4E88ABD4">
+      <End Role="TALUMNO" EntitySet="TALUMNO" />
+      <End Role="TDICTAMEN_INGRESADO" EntitySet="TDICTAMEN_INGRESADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDICTAMEN__id_di__4F7CD00D" Association="Self.FK__TDICTAMEN__id_di__4F7CD00D">
+      <End Role="TDICTAMINANTE" EntitySet="TDICTAMINANTE" />
+      <End Role="TDICTAMEN_INGRESADO" EntitySet="TDICTAMEN_INGRESADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDICTAMEN__id_di__52593CB8" Association="Self.FK__TDICTAMEN__id_di__52593CB8">
+      <End Role="TDICTAMEN_INGRESADO" EntitySet="TDICTAMEN_INGRESADO" />
+      <End Role="TDICTAMEN_DEVUELTO" EntitySet="TDICTAMEN_DEVUELTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDICTAMIN__id_di__3F466844" Association="Self.FK__TDICTAMIN__id_di__3F466844">
+      <End Role="TDICTAMINANTE" EntitySet="TDICTAMINANTE" />
+      <End Role="TDICTAMINANTE_MAESTRIA" EntitySet="TDICTAMINANTE_MAESTRIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDICTAMIN__id_di__4316F928" Association="Self.FK__TDICTAMIN__id_di__4316F928">
+      <End Role="TDICTAMINANTE" EntitySet="TDICTAMINANTE" />
+      <End Role="TDICTAMINANTE_DOCTORADO" EntitySet="TDICTAMINANTE_DOCTORADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDICTAMIN__id_di__46E78A0C" Association="Self.FK__TDICTAMIN__id_di__46E78A0C">
+      <End Role="TDICTAMINANTE" EntitySet="TDICTAMINANTE" />
+      <End Role="TDICTAMINANTE_TELEFONO" EntitySet="TDICTAMINANTE_TELEFONO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDICTAMIN__id_do__440B1D61" Association="Self.FK__TDICTAMIN__id_do__440B1D61">
+      <End Role="TDOCTORADO" EntitySet="TDOCTORADO" />
+      <End Role="TDICTAMINANTE_DOCTORADO" EntitySet="TDICTAMINANTE_DOCTORADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDICTAMIN__id_ma__403A8C7D" Association="Self.FK__TDICTAMIN__id_ma__403A8C7D">
+      <End Role="TMAESTRIA" EntitySet="TMAESTRIA" />
+      <End Role="TDICTAMINANTE_MAESTRIA" EntitySet="TDICTAMINANTE_MAESTRIA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

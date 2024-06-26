@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="POSTGRADODBModelStoreContainer" CdmEntityContainer="POSTGRADODBEntities">
+    <EntitySetMapping Name="TALUMNO">
+      <EntityTypeMapping TypeName="POSTGRADODBModel.TALUMNO">
+        <MappingFragment StoreEntitySet="TALUMNO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apPaterno" ColumnName="apPaterno" />
+          <ScalarProperty Name="apMaterno" ColumnName="apMaterno" />
+          <ScalarProperty Name="telefono_fijo" ColumnName="telefono_fijo" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TALUMNO_TELEFONO">
+      <EntityTypeMapping TypeName="POSTGRADODBModel.TALUMNO_TELEFONO">
+        <MappingFragment StoreEntitySet="TALUMNO_TELEFONO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
+          <ScalarProperty Name="numero_movil" ColumnName="numero_movil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TDICTAMEN_DEVUELTO">
+      <EntityTypeMapping TypeName="POSTGRADODBModel.TDICTAMEN_DEVUELTO">
+        <MappingFragment StoreEntitySet="TDICTAMEN_DEVUELTO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_dictamen" ColumnName="id_dictamen" />
+          <ScalarProperty Name="nombre_destinatario" ColumnName="nombre_destinatario" />
+          <ScalarProperty Name="apPaterno_destinatario" ColumnName="apPaterno_destinatario" />
+          <ScalarProperty Name="apMaterno_destinatario" ColumnName="apMaterno_destinatario" />
+          <ScalarProperty Name="fecha_entrega" ColumnName="fecha_entrega" />
+          <ScalarProperty Name="foto_dictamen" ColumnName="foto_dictamen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TDICTAMEN_INGRESADO">
+      <EntityTypeMapping TypeName="POSTGRADODBModel.TDICTAMEN_INGRESADO">
+        <MappingFragment StoreEntitySet="TDICTAMEN_INGRESADO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
+          <ScalarProperty Name="id_dictaminante" ColumnName="id_dictaminante" />
+          <ScalarProperty Name="asunto" ColumnName="asunto" />
+          <ScalarProperty Name="destinatario" ColumnName="destinatario" />
+          <ScalarProperty Name="fecha_emision" ColumnName="fecha_emision" />
+          <ScalarProperty Name="foto_dictamen" ColumnName="foto_dictamen" />
+          <ScalarProperty Name="fecha_ingreso" ColumnName="fecha_ingreso" />
+          <ScalarProperty Name="observado" ColumnName="observado" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TDICTAMINANTE">
+      <EntityTypeMapping TypeName="POSTGRADODBModel.TDICTAMINANTE">
+        <MappingFragment StoreEntitySet="TDICTAMINANTE">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apPaterno" ColumnName="apPaterno" />
+          <ScalarProperty Name="apMaterno" ColumnName="apMaterno" />
+          <ScalarProperty Name="profesion" ColumnName="profesion" />
+          <ScalarProperty Name="telefono_fijo" ColumnName="telefono_fijo" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TDICTAMINANTE_DOCTORADO">
+      <EntityTypeMapping TypeName="POSTGRADODBModel.TDICTAMINANTE_DOCTORADO">
+        <MappingFragment StoreEntitySet="TDICTAMINANTE_DOCTORADO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_dictaminante" ColumnName="id_dictaminante" />
+          <ScalarProperty Name="id_doctorado" ColumnName="id_doctorado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TDICTAMINANTE_MAESTRIA">
+      <EntityTypeMapping TypeName="POSTGRADODBModel.TDICTAMINANTE_MAESTRIA">
+        <MappingFragment StoreEntitySet="TDICTAMINANTE_MAESTRIA">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_dictaminante" ColumnName="id_dictaminante" />
+          <ScalarProperty Name="id_maestria" ColumnName="id_maestria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TDICTAMINANTE_TELEFONO">
+      <EntityTypeMapping TypeName="POSTGRADODBModel.TDICTAMINANTE_TELEFONO">
+        <MappingFragment StoreEntitySet="TDICTAMINANTE_TELEFONO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_dictaminante" ColumnName="id_dictaminante" />
+          <ScalarProperty Name="numero_movil" ColumnName="numero_movil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TDOCTORADO">
+      <EntityTypeMapping TypeName="POSTGRADODBModel.TDOCTORADO">
+        <MappingFragment StoreEntitySet="TDOCTORADO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="especialidad" ColumnName="especialidad" />
+          <ScalarProperty Name="universidad" ColumnName="universidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TMAESTRIA">
+      <EntityTypeMapping TypeName="POSTGRADODBModel.TMAESTRIA">
+        <MappingFragment StoreEntitySet="TMAESTRIA">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="especialidad" ColumnName="especialidad" />
+          <ScalarProperty Name="universidad" ColumnName="universidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TUSUARIO">
+      <EntityTypeMapping TypeName="POSTGRADODBModel.TUSUARIO">
+        <MappingFragment StoreEntitySet="TUSUARIO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apPaterno" ColumnName="apPaterno" />
+          <ScalarProperty Name="apMaterno" ColumnName="apMaterno" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+          <ScalarProperty Name="cargo" ColumnName="cargo" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

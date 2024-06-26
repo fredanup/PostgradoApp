@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="POSTGRADODBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TALUMNO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apPaterno" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apMaterno" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="telefono_fijo" Type="varchar" MaxLength="100" />
+    <Property Name="correo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TALUMNO_TELEFONO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_alumno" Type="int" />
+    <Property Name="numero_movil" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TDICTAMEN_DEVUELTO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_dictamen" Type="int" />
+    <Property Name="nombre_destinatario" Type="varchar" MaxLength="255" />
+    <Property Name="apPaterno_destinatario" Type="varchar" MaxLength="255" />
+    <Property Name="apMaterno_destinatario" Type="varchar" MaxLength="255" />
+    <Property Name="fecha_entrega" Type="date" />
+    <Property Name="foto_dictamen" Type="image" />
+  </EntityType>
+  <EntityType Name="TDICTAMEN_INGRESADO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_alumno" Type="int" />
+    <Property Name="id_dictaminante" Type="int" />
+    <Property Name="asunto" Type="varchar(max)" Nullable="false" />
+    <Property Name="destinatario" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="fecha_emision" Type="date" Nullable="false" />
+    <Property Name="foto_dictamen" Type="image" />
+    <Property Name="fecha_ingreso" Type="date" Nullable="false" />
+    <Property Name="apto" Type="bit" Nullable="false" />
+    <Property Name="detalle" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="TDOCENTE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apPaterno" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apMaterno" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="telefono_fijo" Type="varchar" MaxLength="100" />
+    <Property Name="correo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TDOCENTE_DOCTORADO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_docente" Type="int" />
+    <Property Name="id_doctorado" Type="int" />
+  </EntityType>
+  <EntityType Name="TDOCENTE_MAESTRIA">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_docente" Type="int" />
+    <Property Name="id_maestria" Type="int" />
+  </EntityType>
+  <EntityType Name="TDOCENTE_PROFESION">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_docente" Type="int" />
+    <Property Name="id_profesion" Type="int" />
+  </EntityType>
+  <EntityType Name="TDOCENTE_TELEFONO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_docente" Type="int" />
+    <Property Name="numero_movil" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TDOCTORADO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="especialidad" Type="varchar" MaxLength="200" />
+    <Property Name="universidad" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="TMAESTRIA">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="especialidad" Type="varchar" MaxLength="200" />
+    <Property Name="universidad" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="TPROFESION">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+    <Property Name="universidad" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="TUSUARIO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apPaterno" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="apMaterno" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="usuario" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="contraseña" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="cargo" Type="varchar" MaxLength="100" />
+    <Property Name="foto" Type="image" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TALUMNO_TELEFONOVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TALUMNO_TELEFONOVIEW">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Alumno" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Alumno" Type="varchar" MaxLength="768" Nullable="false" />
+    <Property Name="Número telefónico" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TALUMNOFULLNAMEVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TALUMNOFULLNAMEVIEW">
+    <Key>
+      <PropertyRef Name="Alumno" />
+    </Key>
+    <Property Name="Alumno" Type="varchar" MaxLength="768" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TALUMNOVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TALUMNOVIEW">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Alumno" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Alumno" Type="varchar" MaxLength="768" Nullable="false" />
+    <Property Name="Teléfono fijo" Type="varchar" MaxLength="100" />
+    <Property Name="E-mail" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDICTAMEN_DEVUELTOVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TDICTAMEN_DEVUELTOVIEW">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Id de dictamen" />
+      <PropertyRef Name="Alumno" />
+      <PropertyRef Name="Docente" />
+      <PropertyRef Name="Destinatario" />
+      <PropertyRef Name="Apto" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Id de dictamen" Type="int" Nullable="false" />
+    <Property Name="Alumno" Type="varchar" MaxLength="768" Nullable="false" />
+    <Property Name="Docente" Type="varchar" MaxLength="768" Nullable="false" />
+    <Property Name="Destinatario" Type="varchar" MaxLength="768" Nullable="false" />
+    <Property Name="Apto" Type="bit" Nullable="false" />
+    <Property Name="Fecha de entrega" Type="date" />
+    <Property Name="Foto de dictamen" Type="image" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDICTAMEN_INGRESADOVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TDICTAMEN_INGRESADOVIEW">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Alumno" />
+      <PropertyRef Name="Dictaminante" />
+      <PropertyRef Name="Asunto" />
+      <PropertyRef Name="Destinatario" />
+      <PropertyRef Name="Fecha de emisión" />
+      <PropertyRef Name="Fecha de ingreso" />
+      <PropertyRef Name="Apto" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Alumno" Type="varchar" MaxLength="768" Nullable="false" />
+    <Property Name="Dictaminante" Type="varchar" MaxLength="768" Nullable="false" />
+    <Property Name="Asunto" Type="varchar(max)" Nullable="false" />
+    <Property Name="Destinatario" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Fecha de emisión" Type="date" Nullable="false" />
+    <Property Name="Foto de dictamen" Type="image" />
+    <Property Name="Fecha de ingreso" Type="date" Nullable="false" />
+    <Property Name="Apto" Type="bit" Nullable="false" />
+    <Property Name="Detalle" Type="varchar(max)" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTE_DOCTORADOVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TDOCENTE_DOCTORADOVIEW">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Docente" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Docente" Type="varchar" MaxLength="768" Nullable="false" />
+    <Property Name="Especialidad" Type="varchar" MaxLength="200" />
+    <Property Name="Procedencia" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTE_MAESTRIAVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TDOCENTE_MAESTRIAVIEW">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Docente" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Docente" Type="varchar" MaxLength="768" Nullable="false" />
+    <Property Name="Especialidad" Type="varchar" MaxLength="200" />
+    <Property Name="Procedencia" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTE_PROFESIONVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TDOCENTE_PROFESIONVIEW">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Docente" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Docente" Type="varchar" MaxLength="768" Nullable="false" />
+    <Property Name="Profesión" Type="varchar" MaxLength="255" />
+    <Property Name="Procedencia" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTE_TELEFONOVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TDOCENTE_TELEFONOVIEW">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Docente" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Docente" Type="varchar" MaxLength="768" Nullable="false" />
+    <Property Name="Celular" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEFULLNAMEVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TDOCENTEFULLNAMEVIEW">
+    <Key>
+      <PropertyRef Name="Docente" />
+    </Key>
+    <Property Name="Docente" Type="varchar" MaxLength="768" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'POSTGRADODB.dbo.TDOCENTEVIEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TDOCENTEVIEW">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Docente" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Docente" Type="varchar" MaxLength="768" Nullable="false" />
+    <Property Name="Teléfono fijo" Type="varchar" MaxLength="100" />
+    <Property Name="E-mail" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__TALUMNO_T__id_al__5165187F">
+    <End Role="TALUMNO" Type="Self.TALUMNO" Multiplicity="0..1" />
+    <End Role="TALUMNO_TELEFONO" Type="Self.TALUMNO_TELEFONO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TALUMNO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TALUMNO_TELEFONO">
+        <PropertyRef Name="id_alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDICTAMEN__id_al__5441852A">
+    <End Role="TALUMNO" Type="Self.TALUMNO" Multiplicity="0..1" />
+    <End Role="TDICTAMEN_INGRESADO" Type="Self.TDICTAMEN_INGRESADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TALUMNO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDICTAMEN_INGRESADO">
+        <PropertyRef Name="id_alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDICTAMEN__id_di__5535A963">
+    <End Role="TDOCENTE" Type="Self.TDOCENTE" Multiplicity="0..1" />
+    <End Role="TDICTAMEN_INGRESADO" Type="Self.TDICTAMEN_INGRESADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDOCENTE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDICTAMEN_INGRESADO">
+        <PropertyRef Name="id_dictaminante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDICTAMEN__id_di__5812160E">
+    <End Role="TDICTAMEN_INGRESADO" Type="Self.TDICTAMEN_INGRESADO" Multiplicity="0..1" />
+    <End Role="TDICTAMEN_DEVUELTO" Type="Self.TDICTAMEN_DEVUELTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDICTAMEN_INGRESADO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDICTAMEN_DEVUELTO">
+        <PropertyRef Name="id_dictamen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDOCENTE___id_do__3D5E1FD2">
+    <End Role="TDOCENTE" Type="Self.TDOCENTE" Multiplicity="0..1" />
+    <End Role="TDOCENTE_PROFESION" Type="Self.TDOCENTE_PROFESION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDOCENTE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDOCENTE_PROFESION">
+        <PropertyRef Name="id_docente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDOCENTE___id_do__44FF419A">
+    <End Role="TDOCENTE" Type="Self.TDOCENTE" Multiplicity="0..1" />
+    <End Role="TDOCENTE_MAESTRIA" Type="Self.TDOCENTE_MAESTRIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDOCENTE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDOCENTE_MAESTRIA">
+        <PropertyRef Name="id_docente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDOCENTE___id_do__48CFD27E">
+    <End Role="TDOCENTE" Type="Self.TDOCENTE" Multiplicity="0..1" />
+    <End Role="TDOCENTE_DOCTORADO" Type="Self.TDOCENTE_DOCTORADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDOCENTE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDOCENTE_DOCTORADO">
+        <PropertyRef Name="id_docente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDOCENTE___id_do__49C3F6B7">
+    <End Role="TDOCTORADO" Type="Self.TDOCTORADO" Multiplicity="0..1" />
+    <End Role="TDOCENTE_DOCTORADO" Type="Self.TDOCENTE_DOCTORADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDOCTORADO">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDOCENTE_DOCTORADO">
+        <PropertyRef Name="id_doctorado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDOCENTE___id_do__4CA06362">
+    <End Role="TDOCENTE" Type="Self.TDOCENTE" Multiplicity="0..1" />
+    <End Role="TDOCENTE_TELEFONO" Type="Self.TDOCENTE_TELEFONO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDOCENTE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDOCENTE_TELEFONO">
+        <PropertyRef Name="id_docente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDOCENTE___id_ma__45F365D3">
+    <End Role="TMAESTRIA" Type="Self.TMAESTRIA" Multiplicity="0..1" />
+    <End Role="TDOCENTE_MAESTRIA" Type="Self.TDOCENTE_MAESTRIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TMAESTRIA">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDOCENTE_MAESTRIA">
+        <PropertyRef Name="id_maestria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TDOCENTE___id_pr__3E52440B">
+    <End Role="TPROFESION" Type="Self.TPROFESION" Multiplicity="0..1" />
+    <End Role="TDOCENTE_PROFESION" Type="Self.TDOCENTE_PROFESION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TPROFESION">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TDOCENTE_PROFESION">
+        <PropertyRef Name="id_profesion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="POSTGRADODBModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TALUMNO" EntityType="Self.TALUMNO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TALUMNO_TELEFONO" EntityType="Self.TALUMNO_TELEFONO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDICTAMEN_DEVUELTO" EntityType="Self.TDICTAMEN_DEVUELTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDICTAMEN_INGRESADO" EntityType="Self.TDICTAMEN_INGRESADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDOCENTE" EntityType="Self.TDOCENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDOCENTE_DOCTORADO" EntityType="Self.TDOCENTE_DOCTORADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDOCENTE_MAESTRIA" EntityType="Self.TDOCENTE_MAESTRIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDOCENTE_PROFESION" EntityType="Self.TDOCENTE_PROFESION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDOCENTE_TELEFONO" EntityType="Self.TDOCENTE_TELEFONO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TDOCTORADO" EntityType="Self.TDOCTORADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TMAESTRIA" EntityType="Self.TMAESTRIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TPROFESION" EntityType="Self.TPROFESION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TUSUARIO" EntityType="Self.TUSUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TALUMNO_TELEFONOVIEW" EntityType="Self.TALUMNO_TELEFONOVIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TALUMNO_TELEFONOVIEW].[id] AS [id], 
+    [TALUMNO_TELEFONOVIEW].[Alumno] AS [Alumno], 
+    [TALUMNO_TELEFONOVIEW].[Número telefónico] AS [Número telefónico]
+    FROM [dbo].[TALUMNO_TELEFONOVIEW] AS [TALUMNO_TELEFONOVIEW]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TALUMNOFULLNAMEVIEW" EntityType="Self.TALUMNOFULLNAMEVIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TALUMNOFULLNAMEVIEW].[Alumno] AS [Alumno]
+    FROM [dbo].[TALUMNOFULLNAMEVIEW] AS [TALUMNOFULLNAMEVIEW]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TALUMNOVIEW" EntityType="Self.TALUMNOVIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TALUMNOVIEW].[id] AS [id], 
+    [TALUMNOVIEW].[Alumno] AS [Alumno], 
+    [TALUMNOVIEW].[Teléfono fijo] AS [Teléfono fijo], 
+    [TALUMNOVIEW].[E-mail] AS [E-mail]
+    FROM [dbo].[TALUMNOVIEW] AS [TALUMNOVIEW]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TDICTAMEN_DEVUELTOVIEW" EntityType="Self.TDICTAMEN_DEVUELTOVIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TDICTAMEN_DEVUELTOVIEW].[id] AS [id], 
+    [TDICTAMEN_DEVUELTOVIEW].[Id de dictamen] AS [Id de dictamen], 
+    [TDICTAMEN_DEVUELTOVIEW].[Alumno] AS [Alumno], 
+    [TDICTAMEN_DEVUELTOVIEW].[Docente] AS [Docente], 
+    [TDICTAMEN_DEVUELTOVIEW].[Destinatario] AS [Destinatario], 
+    [TDICTAMEN_DEVUELTOVIEW].[Apto] AS [Apto], 
+    [TDICTAMEN_DEVUELTOVIEW].[Fecha de entrega] AS [Fecha de entrega], 
+    [TDICTAMEN_DEVUELTOVIEW].[Foto de dictamen] AS [Foto de dictamen]
+    FROM [dbo].[TDICTAMEN_DEVUELTOVIEW] AS [TDICTAMEN_DEVUELTOVIEW]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TDICTAMEN_INGRESADOVIEW" EntityType="Self.TDICTAMEN_INGRESADOVIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TDICTAMEN_INGRESADOVIEW].[id] AS [id], 
+    [TDICTAMEN_INGRESADOVIEW].[Alumno] AS [Alumno], 
+    [TDICTAMEN_INGRESADOVIEW].[Dictaminante] AS [Dictaminante], 
+    [TDICTAMEN_INGRESADOVIEW].[Asunto] AS [Asunto], 
+    [TDICTAMEN_INGRESADOVIEW].[Destinatario] AS [Destinatario], 
+    [TDICTAMEN_INGRESADOVIEW].[Fecha de emisión] AS [Fecha de emisión], 
+    [TDICTAMEN_INGRESADOVIEW].[Foto de dictamen] AS [Foto de dictamen], 
+    [TDICTAMEN_INGRESADOVIEW].[Fecha de ingreso] AS [Fecha de ingreso], 
+    [TDICTAMEN_INGRESADOVIEW].[Apto] AS [Apto], 
+    [TDICTAMEN_INGRESADOVIEW].[Detalle] AS [Detalle]
+    FROM [dbo].[TDICTAMEN_INGRESADOVIEW] AS [TDICTAMEN_INGRESADOVIEW]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TDOCENTE_DOCTORADOVIEW" EntityType="Self.TDOCENTE_DOCTORADOVIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TDOCENTE_DOCTORADOVIEW].[id] AS [id], 
+    [TDOCENTE_DOCTORADOVIEW].[Docente] AS [Docente], 
+    [TDOCENTE_DOCTORADOVIEW].[Especialidad] AS [Especialidad], 
+    [TDOCENTE_DOCTORADOVIEW].[Procedencia] AS [Procedencia]
+    FROM [dbo].[TDOCENTE_DOCTORADOVIEW] AS [TDOCENTE_DOCTORADOVIEW]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TDOCENTE_MAESTRIAVIEW" EntityType="Self.TDOCENTE_MAESTRIAVIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TDOCENTE_MAESTRIAVIEW].[id] AS [id], 
+    [TDOCENTE_MAESTRIAVIEW].[Docente] AS [Docente], 
+    [TDOCENTE_MAESTRIAVIEW].[Especialidad] AS [Especialidad], 
+    [TDOCENTE_MAESTRIAVIEW].[Procedencia] AS [Procedencia]
+    FROM [dbo].[TDOCENTE_MAESTRIAVIEW] AS [TDOCENTE_MAESTRIAVIEW]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TDOCENTE_PROFESIONVIEW" EntityType="Self.TDOCENTE_PROFESIONVIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TDOCENTE_PROFESIONVIEW].[id] AS [id], 
+    [TDOCENTE_PROFESIONVIEW].[Docente] AS [Docente], 
+    [TDOCENTE_PROFESIONVIEW].[Profesión] AS [Profesión], 
+    [TDOCENTE_PROFESIONVIEW].[Procedencia] AS [Procedencia]
+    FROM [dbo].[TDOCENTE_PROFESIONVIEW] AS [TDOCENTE_PROFESIONVIEW]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TDOCENTE_TELEFONOVIEW" EntityType="Self.TDOCENTE_TELEFONOVIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TDOCENTE_TELEFONOVIEW].[id] AS [id], 
+    [TDOCENTE_TELEFONOVIEW].[Docente] AS [Docente], 
+    [TDOCENTE_TELEFONOVIEW].[Celular] AS [Celular]
+    FROM [dbo].[TDOCENTE_TELEFONOVIEW] AS [TDOCENTE_TELEFONOVIEW]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TDOCENTEFULLNAMEVIEW" EntityType="Self.TDOCENTEFULLNAMEVIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TDOCENTEFULLNAMEVIEW].[Docente] AS [Docente]
+    FROM [dbo].[TDOCENTEFULLNAMEVIEW] AS [TDOCENTEFULLNAMEVIEW]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TDOCENTEVIEW" EntityType="Self.TDOCENTEVIEW" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TDOCENTEVIEW].[id] AS [id], 
+    [TDOCENTEVIEW].[Docente] AS [Docente], 
+    [TDOCENTEVIEW].[Teléfono fijo] AS [Teléfono fijo], 
+    [TDOCENTEVIEW].[E-mail] AS [E-mail]
+    FROM [dbo].[TDOCENTEVIEW] AS [TDOCENTEVIEW]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__TALUMNO_T__id_al__5165187F" Association="Self.FK__TALUMNO_T__id_al__5165187F">
+      <End Role="TALUMNO" EntitySet="TALUMNO" />
+      <End Role="TALUMNO_TELEFONO" EntitySet="TALUMNO_TELEFONO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDICTAMEN__id_al__5441852A" Association="Self.FK__TDICTAMEN__id_al__5441852A">
+      <End Role="TALUMNO" EntitySet="TALUMNO" />
+      <End Role="TDICTAMEN_INGRESADO" EntitySet="TDICTAMEN_INGRESADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDICTAMEN__id_di__5535A963" Association="Self.FK__TDICTAMEN__id_di__5535A963">
+      <End Role="TDOCENTE" EntitySet="TDOCENTE" />
+      <End Role="TDICTAMEN_INGRESADO" EntitySet="TDICTAMEN_INGRESADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDICTAMEN__id_di__5812160E" Association="Self.FK__TDICTAMEN__id_di__5812160E">
+      <End Role="TDICTAMEN_INGRESADO" EntitySet="TDICTAMEN_INGRESADO" />
+      <End Role="TDICTAMEN_DEVUELTO" EntitySet="TDICTAMEN_DEVUELTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDOCENTE___id_do__3D5E1FD2" Association="Self.FK__TDOCENTE___id_do__3D5E1FD2">
+      <End Role="TDOCENTE" EntitySet="TDOCENTE" />
+      <End Role="TDOCENTE_PROFESION" EntitySet="TDOCENTE_PROFESION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDOCENTE___id_do__44FF419A" Association="Self.FK__TDOCENTE___id_do__44FF419A">
+      <End Role="TDOCENTE" EntitySet="TDOCENTE" />
+      <End Role="TDOCENTE_MAESTRIA" EntitySet="TDOCENTE_MAESTRIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDOCENTE___id_do__48CFD27E" Association="Self.FK__TDOCENTE___id_do__48CFD27E">
+      <End Role="TDOCENTE" EntitySet="TDOCENTE" />
+      <End Role="TDOCENTE_DOCTORADO" EntitySet="TDOCENTE_DOCTORADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDOCENTE___id_do__49C3F6B7" Association="Self.FK__TDOCENTE___id_do__49C3F6B7">
+      <End Role="TDOCTORADO" EntitySet="TDOCTORADO" />
+      <End Role="TDOCENTE_DOCTORADO" EntitySet="TDOCENTE_DOCTORADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDOCENTE___id_do__4CA06362" Association="Self.FK__TDOCENTE___id_do__4CA06362">
+      <End Role="TDOCENTE" EntitySet="TDOCENTE" />
+      <End Role="TDOCENTE_TELEFONO" EntitySet="TDOCENTE_TELEFONO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDOCENTE___id_ma__45F365D3" Association="Self.FK__TDOCENTE___id_ma__45F365D3">
+      <End Role="TMAESTRIA" EntitySet="TMAESTRIA" />
+      <End Role="TDOCENTE_MAESTRIA" EntitySet="TDOCENTE_MAESTRIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TDOCENTE___id_pr__3E52440B" Association="Self.FK__TDOCENTE___id_pr__3E52440B">
+      <End Role="TPROFESION" EntitySet="TPROFESION" />
+      <End Role="TDOCENTE_PROFESION" EntitySet="TDOCENTE_PROFESION" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
